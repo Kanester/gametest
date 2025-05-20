@@ -26,7 +26,7 @@
 </script>
 
 <canvas bind:this={canvas}></canvas>
-<Joystic size={100} onMove={handleMove} dynamic={true} />
+<Joystick size={100} onMove={handleMove} dynamic={true} />
 
 {#if ctx}
   <Square ctx={ctx} x={30} y={20} width={10} height={10} />
