@@ -1,18 +1,21 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { resize } from "$lib/utils.ts"
   
-  let canvas;
+  let canvas: HTMLCanvasElement;
+  let ctx: CanvasRenderingContext2D;
   
   onMount(() => {
-    let ctx = canvas.getContext("2d");
+    ctx = canvas.getContext("2d");
+    resize(canvas, ctx)
     
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    let r = () => { resize(canvas, ctx) };
     
-    window.addEventListener("resize", () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    })
+    window.addEventListener("resize", r);
+    
+    return () => {
+      window.removeEventListener("resize", r);
+    }
   })
 </script>
 
