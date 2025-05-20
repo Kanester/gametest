@@ -2,7 +2,7 @@ let getWindowSize = () => {
 	return {
 		width: window.innerWidth,
 		height: window.innerHeight,
-		dpr: window.devicePixelRatio || 1
+		DPR: window.devicePixelRatio || 1
 	};
 };
 
