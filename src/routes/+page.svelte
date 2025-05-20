@@ -33,7 +33,7 @@
 <Joystick size={100} onMove={handleMove} dynamic={true} />
 
 {#if ctx}
-  <Square ctx={ctx} x={x} y={y} width={10} height={10} />
+  <Square ctx={ctx} x={x} y={y} width={50} height={50} />
 {/if}
 
 <style>
