@@ -81,7 +81,7 @@
   .inner {
     width: 40%;
     height: 40%;
-    background: white;
+    background: black;
     border-radius: 50%;
     transition: transform 0.05s linear;
   }
