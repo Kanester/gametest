@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onMount, tick } from "svelte";
   import { resize } from "$lib/utils.ts";
   import Square from "$lib/entity/Square.svelte";
   import Joystick from "$lib/hud/Joystick.svelte";
@@ -18,12 +18,14 @@
     vy = +dy.toFixed(2);
   }
   
-  const move = (now: number) => {
+  const move = async (now: number) => {
     const dt = (now - last) / 1000;
     last = now;
     
     x += vx * 100 * dt;
     y += vy * 100 * dt;
+    
+    await tick();
     
     requestAnimationFrame(move);
   }
