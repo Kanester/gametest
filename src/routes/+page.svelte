@@ -20,8 +20,8 @@
     const dt = (now - last) / 1000;
     last = now;
     
-    x += vx * 100 * dt;
-    y += vy * 100 * dt;
+    vx += vx * 100 * dt;
+    vy += vy * 100 * dt;
     
     requestAnimationFrame(move);
   }
