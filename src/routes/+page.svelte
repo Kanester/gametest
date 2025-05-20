@@ -7,7 +7,7 @@
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
   
-  let vx, vy, x, y = 0;
+  let [vx, vy, x, y] = [0, 0, 0, 0];
   let last = performance.now();
   
   const handleMove = (dx: number, dy: number) => {
