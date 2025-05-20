@@ -6,7 +6,7 @@
   export let height: number;
   
   if (ctx) {
-    ctx.fillstyle = "red"; //i dunno how to use rgb for it
+    ctx.fillstyle = "red";
     ctx.fillRect(x, y, width, height);
   }
 </script>
