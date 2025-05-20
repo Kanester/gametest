@@ -8,7 +8,7 @@
   let outer: HTMLDivElement;
   let inner: HTMLDivElement;
   
-  let origin = {x: 500, y: 500};
+  let origin = {x: 0, y: 0};
   let active = false;
   
   function handleStart(event: TouchEvent | MouseEvent) {
@@ -67,6 +67,8 @@
 <style>
   .outer {
     position: fixed;
+    top: 40px;
+    left: 40px;
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
     border-radius: 50%;
