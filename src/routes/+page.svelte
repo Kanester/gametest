@@ -12,8 +12,8 @@
   let last = performance.now();
   
   const handleMove = (dx: number, dy: number) => {
-    x = +dx.toFixed(2);
-    y = +dy.toFixed(2);
+    vx = +dx.toFixed(2);
+    vy = +dy.toFixed(2);
   }
   
   const move = (now: number) => {
@@ -47,7 +47,7 @@
 <Joystick size={100} onMove={handleMove} dynamic={true} />
 
 {#if ctx}
-  <Square ctx={ctx} x={x} y={y} width={50} height={50} />
+  <Square ctx={ctx} x={vx} y={vy} width={50} height={50} />
 {/if}
 
 <style>
