@@ -72,7 +72,6 @@
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
     touch-action: none;
     z-index: 100;
     display: flex;
