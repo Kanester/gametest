@@ -7,8 +7,12 @@
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
   
+  let x: number = 0;
+  let y: number = 0;
+  
   const handleMove = (x: number, y: number) => {
-    console.log("Joystick: ", x.toFixed(2), y.toFixed(2));
+    x = +x.toFixed(2);
+    y = +y.toFixed(2);
   }
   
   const res = () => {
@@ -29,7 +33,7 @@
 <Joystick size={100} onMove={handleMove} dynamic={true} />
 
 {#if ctx}
-  <Square ctx={ctx} x={30} y={20} width={10} height={10} />
+  <Square ctx={ctx} x={x} y={y} width={10} height={10} />
 {/if}
 
 <style>

@@ -67,8 +67,6 @@
 <style>
   .outer {
     position: fixed;
-    top: 40px;
-    left: 40px;
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
     border-radius: 50%;
