@@ -7,8 +7,7 @@
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
   
-  let vx: number = 0;
-  let vy: number = 0;
+  let vx, vy, x, y = 0;
   let last = performance.now();
   
   const handleMove = (dx: number, dy: number) => {
@@ -20,8 +19,8 @@
     const dt = (now - last) / 1000;
     last = now;
     
-    vx += vx * 100 * dt;
-    vy += vy * 100 * dt;
+    x += vx * 100 * dt;
+    y += vy * 100 * dt;
     
     requestAnimationFrame(move);
   }
@@ -47,7 +46,7 @@
 <Joystick size={100} onMove={handleMove} dynamic={true} />
 
 {#if ctx}
-  <Square ctx={ctx} x={vx} y={vy} width={50} height={50} />
+  <Square ctx={ctx} x={x} y={y} width={50} height={50} />
 {/if}
 
 <style>
