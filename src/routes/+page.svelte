@@ -7,12 +7,23 @@
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
   
-  let x: number = 0;
-  let y: number = 0;
+  let vx: number = 0;
+  let vy: number = 0;
+  let last = performance.now();
   
-  const handleMove = (newX: number, newY: number) => {
-    x = +newX.toFixed(2);
-    y = +newY.toFixed(2);
+  const handleMove = (dx: number, dy: number) => {
+    x = +dx.toFixed(2);
+    y = +dy.toFixed(2);
+  }
+  
+  const move = (now: number) => {
+    const dt = (now - last) / 1000;
+    last = now;
+    
+    x += vx * 100 * dt;
+    y += vy * 100 * dt;
+    
+    requestAnimationFrame(move);
   }
   
   const res = () => {
@@ -23,6 +34,9 @@
     ctx = canvas.getContext("2d");
     res();
     window.addEventListener("resize", res);
+    
+    move();
+    
     return () => {
       window.removeEventListener("resize", res);
     }
