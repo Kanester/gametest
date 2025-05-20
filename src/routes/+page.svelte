@@ -20,7 +20,10 @@
 </script>
 
 <canvas bind:this={canvas}></canvas>
-<Square ctx={ctx} x={30} y={20} width={10} height={10}  />
+
+{#if ctx}
+  <Square ctx={ctx} x={30} y={20} width={10} height={10}  />
+{/if}
 
 <style>
   canvas {
