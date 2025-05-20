@@ -10,9 +10,9 @@
   let x: number = 0;
   let y: number = 0;
   
-  const handleMove = (x: number, y: number) => {
-    x = +x.toFixed(2);
-    y = +y.toFixed(2);
+  const handleMove = (newX: number, newY: number) => {
+    x = +newX.toFixed(2);
+    y = +newY.toFixed(2);
   }
   
   const res = () => {
