@@ -29,7 +29,7 @@
 	});
 	
 	function update(dt: number) {
-	  const speed = 500;
+	  const speed = 250;
 	  
 	  x += vx * speed * dt;
 	  y += vy * speed * dt;
