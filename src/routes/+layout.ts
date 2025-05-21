@@ -1,4 +1,4 @@
-(globalThis as any).gameSettings ??= {
+(globalThis as any).gameSetting ??= {
 	speed: 300
 };
 

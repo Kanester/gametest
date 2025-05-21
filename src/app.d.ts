@@ -13,7 +13,7 @@ declare global {
 		speed: number;
 	}
 
-	const gameSettings: Game;
+	const gameSetting: Game;
 }
 
 export {};
