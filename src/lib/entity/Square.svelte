@@ -44,15 +44,11 @@
 	function draw() {
 	  if (!c) return;
 	  
-	  /**
-	   * Bg thing...i'll just comment it for now
-	   * c.clearRect(0, 0, window.innerWidth, window.innerHeight);
+	  c.clearRect(0, 0, window.innerWidth, window.innerHeight);
 	  
-	   * c.fillStyle = "rgb(255, 212, 235)";
-	   * c.fillRect(0, 0, window.innerWidth, window.innerHeight);
-	  */
+	  c.fillStyle = "rgb(255, 212, 235)";
+	  c.fillRect(0, 0, window.innerWidth, window.innerHeight);
 	  
-	  // square
 	  c.fillStyle = "lightblue";
 	  c.fillRect(x, y, 50, 50);
 	}
