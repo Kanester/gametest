@@ -27,7 +27,7 @@
 		ctx.set(c);
 
 		c.clearRect(0, 0, width, height);
-		c.fillStyle = 'rgb(255, 212, 445)';
+		c.fillStyle = 'rgb(255, 212, 235)';
 		c.fillRect(0, 0, width, height);
 	}
 
@@ -37,7 +37,7 @@
 		window.addEventListener('resize', init);
 
 		return () => {
-			window.addEventListener('resize', init);
+			window.removeEventListener('resize', init);
 		};
 	});
 </script>
