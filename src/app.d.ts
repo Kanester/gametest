@@ -8,6 +8,12 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+	interface Game {
+		speed: number;
+	}
+
+	const gameSettings: Game;
 }
 
 export {};

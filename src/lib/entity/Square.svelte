@@ -29,7 +29,7 @@
 	});
 	
 	function update(dt: number) {
-	  const speed = 250;
+	  const speed = gameSetting.speed;
 	  
 	  x += vx * speed * dt;
 	  y += vy * speed * dt;
