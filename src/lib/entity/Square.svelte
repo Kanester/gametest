@@ -30,12 +30,21 @@
 	
 	function update(dt: number) {
 	  const speed = gameSetting.speed;
+	  const gravity = 500;
 	  
 	  x += vx * speed * dt;
+	  
+	  vy += gravity * dt;
 	  y += vy * speed * dt;
 	  
 	  const limitX = window.innerWidth - 50;
 	  const limitY = window.innerHeight - 50;
+	  
+	  if (y > limitY) {
+	    y = limitY;
+	    vy = 0
+	    vy *= -0.5;
+	  }
 	  
 	  x = Math.max(0, Math.min(x, limitX));
 	  y = Math.max(0, Math.min(y, limitY));

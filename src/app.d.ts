@@ -11,6 +11,7 @@ declare global {
 
 	interface Game {
 		speed: number;
+		joystickRadius: number
 	}
 
 	const gameSetting: Game;

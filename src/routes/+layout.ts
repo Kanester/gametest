@@ -1,5 +1,6 @@
 (globalThis as any).gameSetting ??= {
-	speed: 300
+	speed: 300,
+	joystickRadius: 50
 };
 
 export {}

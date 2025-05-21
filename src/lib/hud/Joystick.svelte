@@ -5,7 +5,7 @@
 	let stick: HTMLDivElement;
 	let base: HTMLDivElement;
 
-	let radius = 50;
+	let radius = gameSetting.joystickRadius;
 
 	let dragging = false;
 
