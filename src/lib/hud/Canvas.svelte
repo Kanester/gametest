@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { ctx } from '../utils';
+  import { onMount } from "svelte"; 
+  import { ctx } from "../utils";
 
 	let canvas: HTMLCanvasElement;
 	let width: number;
@@ -8,6 +8,8 @@
 	let dpr: number;
 
 	function init() {
+		const c = canvas.getContext('2d');
+
 		dpr = window.devicePixelRatio || 1;
 		width = window.innerWidth;
 		height = window.innerHeight;
@@ -15,8 +17,8 @@
 		canvas.height = height * dpr;
 		canvas.style.width = width + 'px';
 		canvas.style.height = height + 'px';
+		c?.scale(dpr, dpr);
 
-		const c = canvas.getContext('2d');
 		if (!c) {
 			console.error('2D Canvas is not supported!');
 			ctx.set(null);
