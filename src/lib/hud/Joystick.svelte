@@ -70,7 +70,8 @@
 	on:mouseup={onEnd}
 	on:touchstart={() => (dragging = true)}
 	on:touchmove={onMove}
-	on:touchend={onEnd}>
+	on:touchend={onEnd}
+	role="presentation">
 	<div bind:this={stick} class="stick"></div>
 </div>
 
